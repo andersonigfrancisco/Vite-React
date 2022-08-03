@@ -2,7 +2,7 @@ import { Header } from './Components/Header';
 import { Post } from './Post'
 
 
-import './styles.css';
+import './global.css';
 
 export function App() {
 
@@ -10,6 +10,7 @@ export function App() {
 
     <div>
       <Header />
+
       <Post 
         author="Anderson Francisco"
         content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae dolorem amet, maiores nihil quod veritatis doloribus sequi praesentium provident, eos quas dolorum, hic ratione voluptatibus? Ducimus, molestias? Aliquid, voluptatem inventore."
