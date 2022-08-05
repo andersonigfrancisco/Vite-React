@@ -25,10 +25,6 @@ export function App() {
 
           <Post/>
 
-          
-
-          <Post/>
-
           <Post/>
 
         </main>
