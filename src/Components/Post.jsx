@@ -9,7 +9,7 @@ export function Post() {
         <div className={styles.author}>
           <img className={styles.avatar} src="https://github.com/andersonigfrancisco.png" />
           <div className={styles.authorInfo}>
-            <strong>Diego Fernandes</strong>
+            <strong>Anderson Francisco</strong>
             <span>Web Developer</span>
           </div>
         </div>
@@ -31,11 +31,11 @@ export function Post() {
           placeholder="Deixe um comentário"
         />
 
-        <footer> 
+        <footer>
           <button type="submit">Publicar</button>
         </footer>
-      </form>  
-       
+      </form>
+
 
     </article>
   )

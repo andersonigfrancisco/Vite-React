@@ -4,7 +4,7 @@
   padding: 2.5rem;
 }
 
-.post + .post {
+.post+.post {
   margin-top: 2rem;
 }
 
@@ -28,13 +28,13 @@
   color: var(--green-300);
 }
 
-.post > header {
+.post>header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.post > header time {
+.post>header time {
   font-size: 0.875rem;
   color: var(--gray-400);
 }
@@ -74,7 +74,7 @@
   border-top: 1px solid var(--gray-600);
 }
 
-.commentForm > strong {
+.commentForm>strong {
   line-height: 1.6;
   color: var(--gray-100);
 }
