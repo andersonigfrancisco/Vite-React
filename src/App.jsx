@@ -14,7 +14,6 @@ export function App() {
 
     <div>
                
-
       <Header />  
 
       <div className={styles.wrapper}>
@@ -30,7 +29,6 @@ export function App() {
         </main>
 
       </div>
-
   
     </div>
 
