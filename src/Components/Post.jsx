@@ -1,7 +1,7 @@
 import styles from './post.module.css';
 import { Comment } from './Comment';
 import { Avatar } from './Avatar';
-import {useState} from 'react'
+import { useState } from 'react'
 
 import { format, formatDistanceToNow } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
@@ -9,9 +9,9 @@ import ptBR from 'date-fns/locale/pt-BR';
 
 export function Post({ author, publishedAt, content }) {
 
-  const [comments,setComment] = useState([])
+  const [comments, setComment] = useState([])
 
-  const [newCommentText,setNewCommentText] = useState('')
+  const [newCommentText, setNewCommentText] = useState('')
 
   const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
     locale: ptBR,
@@ -26,18 +26,21 @@ export function Post({ author, publishedAt, content }) {
 
     event.preventDefault();
     //const newComment = event.target.comment.value;
-    setComment([...comments,newCommentText]);
+    setComment([...comments, newCommentText]);
     //event.target.comment.value ='';
     setNewCommentText('');
   }
 
-  function handleNewCommentChange()
-  {
+  function handleNewCommentChange() {
     setNewCommentText(event.target.value)
   }
 
-  function deleteComment(comment){
-    console.log(`Deletar comentário ${comment}`)
+  function deleteComment(commentToDelete) {
+    const commentsWithoutDeletedOne = comments.filter(comment => {
+      return comment !== commentToDelete;
+    })
+
+    setComment(commentsWithoutDeletedOne);
   }
 
   return (
@@ -90,9 +93,9 @@ export function Post({ author, publishedAt, content }) {
         {
           comments.map(comment => {
             return (
-              <Comment 
-                key={comment} 
-                content={comment} 
+              <Comment
+                key={comment}
+                content={comment}
                 onDeleteComment={deleteComment}
               />)
           })
